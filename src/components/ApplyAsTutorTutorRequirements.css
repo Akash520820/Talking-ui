@@ -1,0 +1,355 @@
+/* ApplyAsTutorTutorRequirements.css */
+.atr-requirements-section {
+  padding: 80px 0;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.atr-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.atr-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.atr-content-column {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 2rem;
+}
+
+.atr-grid-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.atr-content-wrapper {
+  max-width: 100%;
+}
+
+.atr-main-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.atr-highlight-text {
+  color: #4A90E2;
+  display: block;
+}
+
+.atr-description {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.atr-btn-become-tutor {
+  background: linear-gradient(135deg, #FF7F50 0%, #4A90E2 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  cursor: pointer;
+}
+
+.atr-btn-become-tutor:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+  background: linear-gradient(135deg, #FF6347 0%, #3A7BC8 100%);
+}
+
+.atr-play-icon {
+  font-size: 0.9rem;
+}
+
+.atr-arrow-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.atr-btn-become-tutor:hover .atr-arrow-icon {
+  transform: translateX(3px);
+}
+
+.atr-requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.atr-requirement-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.atr-requirement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15);
+  border-color: #4A90E2;
+}
+
+.atr-card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #FF7F50 0%, #FF6347 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.atr-requirement-card:hover .atr-card-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 15px rgba(255, 127, 80, 0.4);
+}
+
+.atr-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4A90E2;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.atr-card-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .atr-requirements-section {
+    padding: 70px 0;
+  }
+  
+  .atr-content-column {
+    padding-right: 1rem;
+  }
+  
+  .atr-requirements-grid {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .atr-requirements-section {
+    padding: 60px 0;
+  }
+  
+  .atr-row {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .atr-content-column {
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .atr-main-title {
+    text-align: center;
+  }
+  
+  .atr-description {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .atr-btn-become-tutor {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .atr-requirements-section {
+    padding: 50px 0;
+  }
+  
+  .atr-container {
+    padding: 0 16px;
+  }
+  
+  .atr-row {
+    gap: 40px;
+  }
+  
+  .atr-requirements-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .atr-requirement-card {
+    padding: 1.5rem;
+  }
+  
+  .atr-card-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .atr-card-title {
+    font-size: 0.95rem;
+  }
+  
+  .atr-card-description {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .atr-requirements-section {
+    padding: 40px 0;
+  }
+  
+  .atr-container {
+    padding: 0 16px;
+  }
+  
+  .atr-row {
+    gap: 35px;
+  }
+  
+  .atr-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .atr-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .atr-btn-become-tutor {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .atr-requirements-grid {
+    max-width: 100%;
+  }
+  
+  .atr-requirement-card {
+    padding: 1.3rem;
+  }
+  
+  .atr-card-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atr-requirements-section {
+    padding: 35px 0;
+  }
+  
+  .atr-main-title {
+    font-size: 1.6rem;
+  }
+  
+  .atr-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .atr-btn-become-tutor {
+    padding: 11px 22px;
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+  
+  .atr-play-icon {
+    font-size: 0.8rem;
+  }
+  
+  .atr-arrow-icon {
+    font-size: 1rem;
+  }
+  
+  .atr-requirement-card {
+    padding: 1.2rem;
+  }
+  
+  .atr-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+  
+  .atr-card-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .atr-card-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* Focus states for accessibility */
+.atr-btn-become-tutor:focus {
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+.atr-requirement-card:focus-within {
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .atr-requirement-card,
+  .atr-btn-become-tutor,
+  .atr-card-icon,
+  .atr-arrow-icon {
+    transition: none;
+  }
+  
+  .atr-requirement-card:hover,
+  .atr-btn-become-tutor:hover {
+    transform: none;
+  }
+  
+  .atr-requirement-card:hover .atr-card-icon {
+    transform: none;
+  }
+}

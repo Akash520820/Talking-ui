@@ -1,0 +1,594 @@
+/* FAQThirdPart.css - Modern Light Theme */
+
+.talkeng-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.talkeng-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.talkeng-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo Section */
+.logo-container {
+  margin-bottom: 40px;
+}
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  border: 2px solid #ede9fe;
+  transition: all 0.3s ease;
+}
+
+.logo-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+}
+
+.logo-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-icon-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.logo-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8b5cf6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Content Section */
+.content-section {
+  max-width: 550px;
+}
+
+.section-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.section-heading-highlight {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin-bottom: 35px;
+}
+
+.description-text strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Features List */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-icon-wrapper {
+  width: 28px;
+  height: 28px;
+  background: #ede9fe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon {
+  width: 16px;
+  height: 16px;
+  color: #8b5cf6;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border: none;
+  border-radius: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+}
+
+.cta-arrow {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Contact Card */
+.contact-card {
+  background: #ffffff;
+  padding: 45px 40px;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  border-radius: 24px 24px 0 0;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+}
+
+.contact-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.contact-card-title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+.contact-title-icon-svg {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+}
+
+/* Contact Items */
+.contact-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  position: relative;
+  padding-left: 45px;
+}
+
+.contact-item-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  background: #ede9fe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon-svg {
+  width: 18px;
+  height: 18px;
+  color: #8b5cf6;
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.email-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-link {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.email-link:hover {
+  color: #6366f1;
+  transform: translateX(5px);
+}
+
+.email-link-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .talkeng-section {
+    padding: 80px 0;
+  }
+  
+  .section-heading {
+    font-size: 2.4rem;
+  }
+  
+  .contact-card {
+    padding: 40px 35px;
+  }
+}
+
+@media (max-width: 991px) {
+  .talkeng-section {
+    padding: 70px 0;
+  }
+  
+  .section-heading {
+    font-size: 2.2rem;
+  }
+  
+  .description-text {
+    font-size: 1rem;
+  }
+  
+  .contact-card {
+    margin-top: 50px;
+    padding: 35px 30px;
+  }
+  
+  .contact-card-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .talkeng-section {
+    padding: 60px 0;
+  }
+  
+  .logo-wrapper {
+    padding: 10px 20px;
+    gap: 12px;
+  }
+  
+  .logo-icon-box {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .logo-icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .section-heading {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .description-text {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  
+  .features-list {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .feature-item {
+    gap: 10px;
+  }
+  
+  .feature-icon-wrapper {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .feature-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .feature-text {
+    font-size: 0.9rem;
+  }
+  
+  .cta-button {
+    padding: 14px 35px;
+    font-size: 0.95rem;
+  }
+  
+  .contact-card {
+    margin-top: 40px;
+    padding: 30px 25px;
+  }
+  
+  .contact-card-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .contact-card-title-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .contact-title-icon-svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-items-wrapper {
+    gap: 25px;
+  }
+  
+  .contact-item {
+    padding-left: 40px;
+  }
+  
+  .contact-item-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .talkeng-section {
+    padding: 50px 0;
+  }
+  
+  .logo-container {
+    margin-bottom: 30px;
+  }
+  
+  .logo-wrapper {
+    padding: 8px 16px;
+    gap: 10px;
+  }
+  
+  .logo-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-icon-svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .logo-text {
+    font-size: 1.3rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .section-heading {
+    font-size: 1.6rem;
+  }
+  
+  .description-text {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  
+  .features-list {
+    margin-bottom: 25px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 30px;
+  }
+  
+  .contact-card {
+    padding: 25px 20px;
+  }
+  
+  .contact-card-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-items-wrapper {
+    gap: 20px;
+  }
+  
+  .contact-label {
+    font-size: 0.8rem;
+  }
+  
+  .contact-text,
+  .email-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-heading {
+    font-size: 1.4rem;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .contact-card {
+    padding: 20px 16px;
+  }
+  
+  .contact-item {
+    padding-left: 35px;
+  }
+}

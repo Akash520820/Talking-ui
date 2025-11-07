@@ -1,0 +1,701 @@
+/* OlympiadHomePart2.css - Modern Purple Theme */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.olympiad-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+/* Background Elements */
+.olympiad-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Main Content Wrapper */
+.olympiad-content-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Hero Section Layout */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content Section */
+.hero-left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Badge Section */
+.state-badge-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px solid #ede9fe;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.state-badge-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+}
+
+.badge-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+.badge-highlight {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Main Title Section */
+.olympiad-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.olympiad-main-title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #1e293b 0%, #8b5cf6 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  position: relative;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3)); }
+  50% { filter: drop-shadow(0 0 40px rgba(139, 92, 246, 0.5)); }
+}
+
+.title-underline {
+  width: 280px;
+  height: 6px;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1, #8b5cf6);
+  border-radius: 3px;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.olympiad-subtitle {
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+/* Right Registration Card */
+.registration-card-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.registration-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 45px 40px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.registration-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  border-radius: 28px 28px 0 0;
+}
+
+.registration-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+}
+
+/* Card Header */
+.card-header {
+  margin-bottom: 35px;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+}
+
+.card-title-highlight {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Info Cards Container */
+.info-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+/* Info Card Styles */
+.info-card {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 24px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  transition: all 0.3s ease;
+}
+
+.exam-date-card::before {
+  background: linear-gradient(180deg, #8b5cf6, #6366f1);
+}
+
+.exam-time-card::before {
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+}
+
+.info-card:hover {
+  transform: translateX(8px);
+  border-color: #c4b5fd;
+  background: #ffffff;
+}
+
+.card-note-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.note-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.info-card-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.info-card-text strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Date Highlight Box */
+.date-highlight-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #ede9fe, #f3f4f6);
+  border-radius: 12px;
+  margin-top: 12px;
+  border: 1px solid #ddd6fe;
+}
+
+.date-day {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #8b5cf6;
+  letter-spacing: 1px;
+}
+
+.date-main {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.date-year {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6366f1;
+}
+
+/* Download Button */
+.download-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border: none;
+  border-radius: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.download-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.download-button:hover::before {
+  left: 100%;
+}
+
+.download-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(139, 92, 246, 0.4);
+}
+
+.download-button:active {
+  transform: translateY(-1px);
+}
+
+.download-icon-svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* Organizer Section */
+.organizer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+  border-top: 2px solid #e2e8f0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.organizer-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.organizer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.organizer-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .olympiad-main-title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-layout {
+    gap: 50px;
+  }
+  
+  .registration-card {
+    padding: 40px 35px;
+  }
+}
+
+@media (max-width: 991px) {
+  .olympiad-container {
+    padding: 60px 20px;
+  }
+  
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .registration-card-wrapper {
+    justify-content: center;
+  }
+  
+  .olympiad-main-title {
+    font-size: 4rem;
+  }
+  
+  .title-underline {
+    width: 240px;
+  }
+  
+  .state-badge-wrapper {
+    align-self: center;
+  }
+  
+  .olympiad-title-section {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .olympiad-subtitle {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .olympiad-container {
+    padding: 50px 16px;
+  }
+  
+  .hero-layout {
+    gap: 40px;
+  }
+  
+  .hero-left-content {
+    gap: 30px;
+  }
+  
+  .state-badge-wrapper {
+    padding: 16px 24px;
+  }
+  
+  .badge-text {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .badge-highlight {
+    font-size: 1.5rem;
+  }
+  
+  .olympiad-main-title {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+  }
+  
+  .title-underline {
+    width: 200px;
+    height: 5px;
+  }
+  
+  .olympiad-subtitle {
+    font-size: 1rem;
+  }
+  
+  .registration-card {
+    padding: 35px 30px;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+  }
+  
+  .info-cards-container {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .info-card {
+    padding: 20px;
+  }
+  
+  .date-highlight-box {
+    padding: 14px 18px;
+  }
+  
+  .date-main {
+    font-size: 1.3rem;
+  }
+  
+  .download-button {
+    padding: 16px 28px;
+    font-size: 0.95rem;
+  }
+  
+  .organizer-logo {
+    height: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .olympiad-container {
+    padding: 40px 12px;
+  }
+  
+  .hero-layout {
+    gap: 35px;
+  }
+  
+  .hero-left-content {
+    gap: 25px;
+  }
+  
+  .state-badge-wrapper {
+    padding: 14px 20px;
+  }
+  
+  .badge-text {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  
+  .badge-highlight {
+    font-size: 1.3rem;
+  }
+  
+  .olympiad-main-title {
+    font-size: 3rem;
+  }
+  
+  .title-underline {
+    width: 160px;
+    height: 4px;
+  }
+  
+  .olympiad-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .registration-card {
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+  
+  .card-header {
+    margin-bottom: 30px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .info-cards-container {
+    gap: 14px;
+    margin-bottom: 25px;
+  }
+  
+  .info-card {
+    padding: 18px;
+  }
+  
+  .card-note-label {
+    font-size: 0.75rem;
+  }
+  
+  .info-card-text {
+    font-size: 0.9rem;
+  }
+  
+  .date-highlight-box {
+    padding: 12px 16px;
+  }
+  
+  .date-day {
+    font-size: 0.9rem;
+  }
+  
+  .date-main {
+    font-size: 1.2rem;
+  }
+  
+  .date-year {
+    font-size: 0.9rem;
+  }
+  
+  .download-button {
+    padding: 14px 24px;
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+  
+  .download-icon-svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .organizer-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    gap: 12px;
+  }
+  
+  .organizer-label {
+    font-size: 0.85rem;
+  }
+  
+  .organizer-logo {
+    height: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  .olympiad-container {
+    padding: 35px 10px;
+  }
+  
+  .olympiad-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .title-underline {
+    width: 140px;
+  }
+  
+  .registration-card {
+    padding: 25px 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .info-card {
+    padding: 16px;
+  }
+  
+  .download-button {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Accessibility & Performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .registration-card {
+    border: 3px solid #1e293b;
+  }
+  
+  .info-card {
+    border: 2px solid #64748b;
+  }
+}

@@ -1,0 +1,437 @@
+.apply-as-tutor-container {
+  min-height: 70vh;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-as-tutor-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.apply-as-tutor-content {
+  position: relative;
+  z-index: 1;
+}
+
+.apply-as-tutor-main-heading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.apply-as-tutor-main-heading .apply-as-tutor-highlight {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.apply-as-tutor-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.apply-as-tutor-benefits-list {
+  margin-bottom: 40px;
+}
+
+.apply-as-tutor-benefit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.apply-as-tutor-benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.apply-as-tutor-benefit-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.apply-as-tutor-benefit-text {
+  flex: 1;
+}
+
+.apply-as-tutor-benefit-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 5px 0;
+}
+
+.apply-as-tutor-benefit-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.apply-as-tutor-earning-highlight {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.6s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-as-tutor-earning-highlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 8s linear infinite;
+}
+
+.apply-as-tutor-earning-amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.apply-as-tutor-earning-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.apply-as-tutor-cta-button {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  font-weight: 700;
+  padding: 18px 40px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.apply-as-tutor-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.apply-as-tutor-cta-button:hover::before {
+  left: 100%;
+}
+
+.apply-as-tutor-cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(249, 115, 22, 0.4);
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+}
+
+.apply-as-tutor-button-icon {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.apply-as-tutor-cta-button:hover .apply-as-tutor-button-icon {
+  transform: translateX(5px);
+}
+
+.apply-as-tutor-main-row {
+  align-items: center;
+  min-height: 500px;
+}
+
+.apply-as-tutor-video-container {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: slideInRight 1s ease-out 0.4s both;
+}
+
+.apply-as-tutor-video-wrapper {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.apply-as-tutor-video-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.apply-as-tutor-video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.apply-as-tutor-video-wrapper:hover .apply-as-tutor-video {
+  transform: scale(1.05);
+}
+
+.apply-as-tutor-video-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background:transparent;
+  color: #1e293b;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.apply-as-tutor-video-overlay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.apply-as-tutor-live-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.apply-as-tutor-video-glow {
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(45deg, #3b82f6, #f97316, #10b981, #3b82f6);
+  border-radius: 25px;
+  opacity: 0;
+  z-index: -1;
+  animation: rotate 4s linear infinite;
+  transition: opacity 0.3s ease;
+}
+
+.apply-as-tutor-video-wrapper:hover .apply-as-tutor-video-glow {
+  opacity: 0.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .apply-as-tutor-main-heading {
+    font-size: 3rem;
+  }
+  
+  .apply-as-tutor-earning-amount {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .apply-as-tutor-container {
+    padding: 60px 0;
+    min-height: auto;
+  }
+  
+  .apply-as-tutor-main-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .apply-as-tutor-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .apply-as-tutor-benefit-item {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+  }
+  
+  .apply-as-tutor-benefit-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .apply-as-tutor-earning-highlight {
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+  
+  .apply-as-tutor-earning-amount {
+    font-size: 1.8rem;
+  }
+  
+  .apply-as-tutor-cta-button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 35px;
+  }
+  
+  .apply-as-tutor-video-container {
+    margin-top: 40px;
+    padding: 10px;
+  }
+  
+  .apply-as-tutor-video {
+    height: 280px;
+  }
+  
+  .apply-as-tutor-video-overlay {
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apply-as-tutor-main-heading {
+    font-size: 2rem;
+  }
+  
+  .apply-as-tutor-benefit-item {
+    padding: 10px 12px;
+  }
+  
+  .apply-as-tutor-benefit-title {
+    font-size: 1rem;
+  }
+  
+  .apply-as-tutor-benefit-desc {
+    font-size: 0.85rem;
+  }
+  
+  .apply-as-tutor-video {
+    height: 220px;
+  }
+  
+  .apply-as-tutor-cta-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+  
+  .apply-as-tutor-video-overlay {
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
