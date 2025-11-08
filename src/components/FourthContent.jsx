@@ -3,7 +3,7 @@ import './FourthContent.css';
 
 // Import images
 import spokenEnglishImg from '../assets/videosAndPhotos/coursespic/spoken_english_and_personality_development_course_app.jpg';
-import englishMasteryImg from '../assets/videosAndPhotos/coursespic/English mastery.jpg';
+import englishMasteryImg from '../assets/videosAndPhotos/coursespic/Englishmastery.jpg';
 import enrichmentImg from '../assets/videosAndPhotos/coursespic/enrichment(3-5).jpg';
 import academicSuccessImg from '../assets/videosAndPhotos/coursespic/EnglishAcademicSuccess.jpg';
 
